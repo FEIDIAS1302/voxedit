@@ -173,7 +173,7 @@ with col2:
         """, unsafe_allow_html=True)
 
 st.sidebar.markdown("### 1. Input Source")
-tab1, tab2 = st.sidebar.tabs(["📁 Upload", "🐟 Fish Audio"])
+tab1, tab2 = st.sidebar.tabs(["📁 Upload", "🐟 API"])
 
 with tab1:
     uf = st.file_uploader("Upload WAV", type=["wav"])
@@ -365,4 +365,5 @@ else:
             c1.audio(syn, sample_rate=st.session_state['fs'])
             buf = io.BytesIO()
             sf.write(buf, syn, st.session_state['fs'], format='WAV')
+
             c2.download_button("Download", buf, "edited.wav", "audio/wav", use_container_width=True)

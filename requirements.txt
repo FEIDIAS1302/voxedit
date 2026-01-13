@@ -1,0 +1,8 @@
+streamlit
+numpy
+pyworld
+soundfile
+matplotlib
+scipy
+requests
+streamlit-drawable-canvas
